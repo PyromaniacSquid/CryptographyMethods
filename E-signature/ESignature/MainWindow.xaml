@@ -1,0 +1,61 @@
+﻿<Window x:Class="ESignature.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ESignature"
+        mc:Ignorable="d"
+        Title="Подписанный документ" Height="450" Width="400" MinHeight="450" MinWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Menu Height="25" VerticalAlignment="Top" Grid.Row="0">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Создать"></MenuItem>
+                <MenuItem Header="Загрузить"></MenuItem>
+                <MenuItem Header="Сохранить"></MenuItem>
+                <Separator HorizontalAlignment="Center"/>
+                <MenuItem Header="Выход" Click="ExitButtonClick"></MenuItem>
+                <Separator HorizontalAlignment="Center"/>
+                <MenuItem Header="О программе"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Управление ключами">
+                <MenuItem Header="Экспорт открытого ключа"/>
+                <MenuItem Header="Импорт открытого ключа"/>
+                <MenuItem Header="Удаление пары ключей"/>
+                <MenuItem Header="Выбор закрытого ключа"/>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Имя пользователя:" Grid.Row="1" Height="25" Margin="15,0,0,0" VerticalAlignment="Top" Grid.Column="0"/>
+            <TextBox Grid.Row="1" Height="25" Margin="15,30,0,0" Name="UsernameTextBox" VerticalAlignment="Top" Grid.Column="0"/>
+            <Button Name="ChooseUserButton" Margin="5,10,3,0" Grid.Row="1" Grid.Column="1" Click="ChooseUserButtonClick" FontSize="10">
+                <TextBlock Text="Выбрать пользователя" TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button Name="LoadDocumentButton" Margin="2,10,3,0" Grid.Row="1" Grid.Column="2" Click="LoadDocumentButtonClick">
+                <TextBlock Text="Загрузить документ" TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button Name="SaveDocumentButton" Margin="2,10,3,0" Grid.Row="1" Grid.Column="3" Click="SaveDocumentButtonClick">
+                <TextBlock Text="Сохранить документ" TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="2">
+            <RichTextBox x:Name="TextEditor" Margin="15,5,3,10" Background="WhiteSmoke"/>
+        </Grid>
+     </Grid>
+</Window>

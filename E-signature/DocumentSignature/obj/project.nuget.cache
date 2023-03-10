@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qmPMU4t6lyIj/FZU7dzEqeQezTfDWpJAaMqClgHnwBX0q0RK3coD7q+goCPZqCdqo8/RNcDaC22p92hJbkCI9Q==",
+  "success": true,
+  "projectFilePath": "M:\\8 term\\CryptographyGit\\CryptographyMethods\\E-signature\\DocumentSignature\\DocumentSignature.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mrsta\\.nuget\\packages\\ripemd160\\1.0.0\\ripemd160.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

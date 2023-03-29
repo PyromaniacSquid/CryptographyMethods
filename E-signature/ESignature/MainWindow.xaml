@@ -15,19 +15,22 @@
         
         <Menu Height="25" VerticalAlignment="Top" Grid.Row="0">
             <MenuItem Header="Файл">
-                <MenuItem Header="Создать"></MenuItem>
-                <MenuItem Header="Загрузить"></MenuItem>
-                <MenuItem Header="Сохранить"></MenuItem>
+                <MenuItem Name="menuCreateDocumentButton" Click="menuCreateDocumentButton_Click" Header="Создать"></MenuItem>
+                <MenuItem Name="menuLoadDocumentButton" Click="LoadDocumentButtonClick" Header="Загрузить"></MenuItem>
+                <MenuItem Name="menuSaveDocumentButton" Click="SaveDocumentButtonClick" Header="Сохранить"></MenuItem>
                 <Separator HorizontalAlignment="Center"/>
                 <MenuItem Header="Выход" Click="ExitButtonClick"></MenuItem>
                 <Separator HorizontalAlignment="Center"/>
                 <MenuItem Header="О программе"></MenuItem>
             </MenuItem>
-            <MenuItem Header="Управление ключами">
-                <MenuItem Header="Экспорт открытого ключа"/>
-                <MenuItem Header="Импорт открытого ключа"/>
-                <MenuItem Header="Удаление пары ключей"/>
-                <MenuItem Header="Выбор закрытого ключа"/>
+            <MenuItem Name="menuKeySection" Header="Управление ключами">
+                <MenuItem Name="menuExportKeyButton" Click="menuExportKeyButton_Click" Header="Экспорт открытого ключа"/>
+                <MenuItem Name="menuImportKeyButton" Click="menuImportKeyButton_Click" Header="Импорт открытого ключа"/>
+                <MenuItem Name="menuDeleteKeysButton" Click="menuDeleteKeysButton_Click" Header="Удаление пары ключей"/>
+                <MenuItem Name="menuChooseKeyButton" Click="menuChooseKeyButton_Click" Header="Выбор закрытого ключа"/>
+            </MenuItem>
+            <MenuItem Header="О программе">
+                <MenuItem Name="AboutBoxButton" Click="AboutBoxButton_Click"></MenuItem>
             </MenuItem>
         </Menu>
         <Grid Grid.Row="1">
@@ -43,8 +46,9 @@
                 <ColumnDefinition Width="0.2*"/>
             </Grid.ColumnDefinitions>
             <Label Content="Имя пользователя:" Grid.Row="1" Height="25" Margin="15,0,0,0" VerticalAlignment="Top" Grid.Column="0"/>
-            <TextBox Grid.Row="1" Height="25" Margin="15,30,0,0" Name="UsernameTextBox" VerticalAlignment="Top" Grid.Column="0"/>
-            <Button Name="ChooseUserButton" Margin="5,10,3,0" Grid.Row="1" Grid.Column="1" Click="ChooseUserButtonClick" FontSize="10">
+            <TextBox Grid.Row="1" Height="25" Margin="15,30,0,0" Name="UsernameTextBox" VerticalAlignment="Top" Grid.Column="0"
+                     KeyDown="UsernameTextBox_KeyDown"/>
+            <Button Name="ChooseUserButton" Margin="5,10,3,0" Grid.Row="1" Grid.Column="1" Click="menuChooseKeyButton_Click" FontSize="10">
                 <TextBlock Text="Выбрать пользователя" TextWrapping="Wrap" TextAlignment="Center"/>
             </Button>
             <Button Name="LoadDocumentButton" Margin="2,10,3,0" Grid.Row="1" Grid.Column="2" Click="LoadDocumentButtonClick">

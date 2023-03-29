@@ -1,0 +1,28 @@
+﻿<Window x:Class="ESignature.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ESignature"
+        mc:Ignorable="d"
+        Title="О программе..." Height="350" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.6*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.4*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3" FontSize="25">ЛР 1 по Криптографическим методам</TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="3" FontSize="22">Малахов Николай А-05-19</TextBlock>
+        <Image Source="Hackerman.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"></Image>
+        <Image Source="Hackerman.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2"></Image>
+        <Button Name="Exit" Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,25" Click="Exit_Click">
+            <Label>ОК</Label>
+        </Button>
+    </Grid>
+</Window>

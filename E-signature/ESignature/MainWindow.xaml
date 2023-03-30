@@ -21,16 +21,13 @@
                 <Separator HorizontalAlignment="Center"/>
                 <MenuItem Header="Выход" Click="ExitButtonClick"></MenuItem>
                 <Separator HorizontalAlignment="Center"/>
-                <MenuItem Header="О программе"></MenuItem>
+                <MenuItem Header="О программе" Click="AboutBoxButton_Click"></MenuItem>
             </MenuItem>
             <MenuItem Name="menuKeySection" Header="Управление ключами">
                 <MenuItem Name="menuExportKeyButton" Click="menuExportKeyButton_Click" Header="Экспорт открытого ключа"/>
                 <MenuItem Name="menuImportKeyButton" Click="menuImportKeyButton_Click" Header="Импорт открытого ключа"/>
                 <MenuItem Name="menuDeleteKeysButton" Click="menuDeleteKeysButton_Click" Header="Удаление пары ключей"/>
                 <MenuItem Name="menuChooseKeyButton" Click="menuChooseKeyButton_Click" Header="Выбор закрытого ключа"/>
-            </MenuItem>
-            <MenuItem Header="О программе">
-                <MenuItem Name="AboutBoxButton" Click="AboutBoxButton_Click"></MenuItem>
             </MenuItem>
         </Menu>
         <Grid Grid.Row="1">

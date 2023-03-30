@@ -186,6 +186,7 @@ namespace ESignature
             UsernameTextBox.IsEnabled = true;
             UsernameTextBox.Text = "";
             UsernameTextBox.Focus();
+            EnableInteractions(false);
         }
 
         private void menuCreateDocumentButton_Click(object sender, RoutedEventArgs e)

@@ -23,11 +23,9 @@
                 <Separator HorizontalAlignment="Center"/>
                 <MenuItem Header="О программе" Click="AboutBoxButton_Click"></MenuItem>
             </MenuItem>
-            <MenuItem Name="menuKeySection" Header="Управление ключами">
-                <MenuItem Name="menuExportKeyButton" Click="menuExportKeyButton_Click" Header="Экспорт открытого ключа"/>
-                <MenuItem Name="menuImportKeyButton" Click="menuImportKeyButton_Click" Header="Импорт открытого ключа"/>
-                <MenuItem Name="menuDeleteKeysButton" Click="menuDeleteKeysButton_Click" Header="Удаление пары ключей"/>
-                <MenuItem Name="menuChooseKeyButton" Click="menuChooseKeyButton_Click" Header="Выбор закрытого ключа"/>
+            <MenuItem Name="menuKeySection" Header="Управление сертификатами">
+                <MenuItem Name="menuDeleteKeysButton" Click="menuDeleteKeysButton_Click" Header="Удалить..."/>
+                <MenuItem Name="menuChooseKeyButton" Click="menuChooseKeyButton_Click" Header="Выбрать..."/>
             </MenuItem>
         </Menu>
         <Grid Grid.Row="1">
@@ -43,10 +41,9 @@
                 <ColumnDefinition Width="0.2*"/>
             </Grid.ColumnDefinitions>
             <Label Content="Имя пользователя:" Grid.Row="1" Height="25" Margin="15,0,0,0" VerticalAlignment="Top" Grid.Column="0"/>
-            <TextBox Grid.Row="1" Height="25" Margin="15,30,0,0" Name="UsernameTextBox" VerticalAlignment="Top" Grid.Column="0"
-                     KeyDown="UsernameTextBox_KeyDown"/>
+            <TextBox IsReadOnly="True" Grid.Row="1" Height="25" Margin="15,30,0,0" Name="UsernameTextBox" VerticalAlignment="Top" Grid.Column="0"/>
             <Button Name="ChooseUserButton" Margin="5,10,3,0" Grid.Row="1" Grid.Column="1" Click="menuChooseKeyButton_Click" FontSize="10">
-                <TextBlock Text="Выбрать пользователя" TextWrapping="Wrap" TextAlignment="Center"/>
+                <TextBlock Text="Выбрать сертификат" TextWrapping="Wrap" TextAlignment="Center"/>
             </Button>
             <Button Name="LoadDocumentButton" Margin="2,10,3,0" Grid.Row="1" Grid.Column="2" Click="LoadDocumentButtonClick">
                 <TextBlock Text="Загрузить документ" TextWrapping="Wrap" TextAlignment="Center"/>

@@ -9,7 +9,9 @@ namespace ESignature
 {
     internal class SignedDoc
     {
-        public string _userName;
+        
+        public string _userName; // TODO Remove
+        public byte[] cert;
         public byte[] ESignature;
         public string DocContent;
      
@@ -18,6 +20,7 @@ namespace ESignature
             _userName = "";
             ESignature = new byte[] { };
             DocContent = "";
+            cert = new byte[] { };
         }
         public SignedDoc(string fname)
         {
@@ -25,6 +28,7 @@ namespace ESignature
             if (!LoadFromFile(fname, out d))
                 throw new Exception();
             _userName = d._userName;
+            cert = d.cert;
             ESignature = d.ESignature;
             DocContent = d.DocContent;
         }
@@ -36,15 +40,15 @@ namespace ESignature
                 doc = new SignedDoc();
                 using (BinaryReader br = new BinaryReader(new FileStream(fname, FileMode.Open, FileAccess.Read)))
                 {
-                    int name_len, ESignature_len;
+                    int name_len, ESignature_len, cert_len;
                     string uname;
-                    string DocContent; 
-                    
-                    name_len = br.ReadInt32();
+                    string DocContent;
+
+                    //name_len = br.ReadInt32();
+                    cert_len = br.ReadInt32();
                     ESignature_len = br.ReadInt32();
-                    
-                    uname = Encoding.ASCII.GetString(br.ReadBytes(name_len));
-                    
+
+                    byte[] certificate = br.ReadBytes(cert_len);
                     byte[] ESignature = br.ReadBytes(ESignature_len);
                     
                     using (StreamReader sr = new StreamReader(br.BaseStream, Encoding.Unicode))
@@ -54,7 +58,8 @@ namespace ESignature
                     
                     doc.ESignature = ESignature;
                     doc.DocContent = DocContent;
-                    doc._userName = uname;
+                    doc.cert = certificate;
+                    //doc._userName = uname;
                 }
                 return true;
             }
@@ -69,9 +74,11 @@ namespace ESignature
         {
             using (BinaryWriter bw = new BinaryWriter(new FileStream(fname, FileMode.Create, FileAccess.Write)))
             {
-                bw.Write(_userName.Length);
+                //bw.Write(_userName.Length);
+                bw.Write(cert.Length);
                 bw.Write(ESignature.Length);
-                bw.Write(Encoding.ASCII.GetBytes(_userName));
+                //bw.Write(Encoding.ASCII.GetBytes(_userName));
+                bw.Write(cert);
                 bw.Write(ESignature);
                 bw.Write(Encoding.Unicode.GetBytes(DocContent));
             }

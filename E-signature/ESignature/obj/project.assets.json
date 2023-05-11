@@ -1,67 +1,39 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {
-      "RIPEMD160/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp2.0/RIPEMD160.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/RIPEMD160.dll": {}
-        }
-      }
-    }
+    "net5.0-windows7.0": {}
   },
-  "libraries": {
-    "RIPEMD160/1.0.0": {
-      "sha512": "7E+oKx+nalm9wuE1Adze0QRRjYvF8VMBay4ZHdN0i8l2XhsczvG0I4FmUteH1tcaFQ1wsBhZCtj2pf8C1Ofy3Q==",
-      "type": "package",
-      "path": "ripemd160/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netcoreapp2.0/RIPEMD160.dll",
-        "ripemd160.1.0.0.nupkg.sha512",
-        "ripemd160.nuspec"
-      ]
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": [
-      "RIPEMD160 >= 1.0.0"
-    ]
+    "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\mrsta\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Honor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\8 term\\CryptographyGit\\CryptographyMethods\\E-signature\\ESignature\\ESignature.csproj",
+      "projectUniqueName": "D:\\Khorev\\LR1\\CryptographyMethods\\E-signature\\ESignature\\ESignature.csproj",
       "projectName": "ESignature",
-      "projectPath": "M:\\8 term\\CryptographyGit\\CryptographyMethods\\E-signature\\ESignature\\ESignature.csproj",
-      "packagesPath": "C:\\Users\\mrsta\\.nuget\\packages\\",
-      "outputPath": "M:\\8 term\\CryptographyGit\\CryptographyMethods\\E-signature\\ESignature\\obj\\",
+      "projectPath": "D:\\Khorev\\LR1\\CryptographyMethods\\E-signature\\ESignature\\ESignature.csproj",
+      "packagesPath": "C:\\Users\\Honor\\.nuget\\packages\\",
+      "outputPath": "D:\\Khorev\\LR1\\CryptographyMethods\\E-signature\\ESignature\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
+      "crossTargeting": true,
       "configFilePaths": [
-        "C:\\Users\\mrsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Honor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net5.0-windows"
       ],
       "sources": {
-        "M:\\Nuget Packages": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
           "projectReferences": {}
         }
       },
@@ -72,22 +44,15 @@
       }
     },
     "frameworks": {
-      "net6.0-windows7.0": {
-        "targetAlias": "net6.0-windows",
-        "dependencies": {
-          "RIPEMD160": {
-            "target": "Package",
-            "version": "[1.0.0, )"
-          }
-        },
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
         "imports": [
           "net461",
           "net462",
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -99,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

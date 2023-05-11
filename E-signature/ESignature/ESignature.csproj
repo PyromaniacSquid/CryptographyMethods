@@ -2,14 +2,13 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFrameworks>net5.0-windows</TargetFrameworks>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <StartupObject></StartupObject>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ApplicationIcon />
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="RIPEMD160" Version="1.0.0" />
-  </ItemGroup>
 
 </Project>

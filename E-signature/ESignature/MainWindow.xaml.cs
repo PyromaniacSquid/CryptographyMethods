@@ -72,7 +72,8 @@ namespace ESignature
                 SignedDoc doc = new SignedDoc(openFileDialog.FileName);
                 if (ValidateSignatures(doc))
                 {
-                    this.Title = "Подписано - " + doc._userName;
+                    var name = new X509Certificate2(doc.cert).GetNameInfo(X509NameType.SimpleName, false);
+                        this.Title = "Подписано - " + name;
                     TextRange range = new TextRange(TextEditor.Document.ContentStart, TextEditor.Document.ContentEnd);
                     range.Text = doc.DocContent;
                 }
@@ -106,7 +107,7 @@ namespace ESignature
             SignedDoc doc = new SignedDoc();
             TextRange range = new TextRange(TextEditor.Document.ContentStart, TextEditor.Document.ContentEnd);
             doc.DocContent = range.Text;
-            //doc._userName = UsernameTextBox.Text;
+            doc._userName = UsernameTextBox.Text;
             doc.cert = _certificate.GetRawCertData();
             doc.ESignature = CryptoProvider.GetDocSignature(Encoding.Default.GetBytes(range.Text));
             doc.SaveToFile(saveFileDialog.FileName);

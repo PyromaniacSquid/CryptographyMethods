@@ -1,28 +1,12 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v6.0",
+    "name": ".NETCoreApp,Version=v6.0/",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v6.0": {
-      "RIPEMD160/1.0.0": {
-        "runtime": {
-          "lib/netcoreapp2.0/RIPEMD160.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      }
-    }
+    ".NETCoreApp,Version=v6.0": {},
+    ".NETCoreApp,Version=v6.0/": {}
   },
-  "libraries": {
-    "RIPEMD160/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7E+oKx+nalm9wuE1Adze0QRRjYvF8VMBay4ZHdN0i8l2XhsczvG0I4FmUteH1tcaFQ1wsBhZCtj2pf8C1Ofy3Q==",
-      "path": "ripemd160/1.0.0",
-      "hashPath": "ripemd160.1.0.0.nupkg.sha512"
-    }
-  }
+  "libraries": {}
 }

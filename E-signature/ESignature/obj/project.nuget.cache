@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uKCgFtHtZT/UTPqsER16AAASXcemmTfAMh0BPFzcU4dqCCDHwbWMeM3sZ7sblrk42kS+R8DT6KBSqIgMFicq/w==",
+  "dgSpecHash": "Mo9Aps08zkI4NbBuZlhRMh0+CiH/ZZKp8C3vCykWLx9Sikfifwuh8wNaWazJEslUA7IsFGnuF0H3ip3EfAWtqA==",
   "success": true,
-  "projectFilePath": "M:\\8 term\\CryptographyGit\\CryptographyMethods\\E-signature\\ESignature\\ESignature.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\mrsta\\.nuget\\packages\\ripemd160\\1.0.0\\ripemd160.1.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\Khorev\\LR1\\CryptographyMethods\\E-signature\\ESignature\\ESignature.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

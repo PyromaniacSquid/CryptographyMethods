@@ -59,7 +59,6 @@ namespace ESignature
                     doc.ESignature = ESignature;
                     doc.DocContent = DocContent;
                     doc.cert = certificate;
-                    //doc._userName = uname;
                 }
                 return true;
             }

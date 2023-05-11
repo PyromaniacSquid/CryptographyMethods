@@ -17,14 +17,14 @@
             <ColumnDefinition Width="0.2*"/>
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3" FontSize="25">ЛР 1 по Криптографическим методам</TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3" FontSize="25">ЛР 3 по Криптографическим методам</TextBlock>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="3" FontSize="22">Малахов Николай А-05-19</TextBlock>
         <Grid Grid.Row="2" Grid.ColumnSpan="3">
             <TextBlock VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        TextWrapping="Wrap"
                        FontSize="22">
-            Вариант 14. Хеширование док-та RIPEMD. Подпись документа RSA. Хеширование ключа SHA1. Подпись ключа DSA.
+            Вариант 14. Хеширование док-та SHA. Подпись документа RSA.
             </TextBlock>
         </Grid>
         <Button Name="Exit" Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,25" Click="Exit_Click">
